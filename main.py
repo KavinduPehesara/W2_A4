@@ -1,15 +1,16 @@
 class Calculator:
 
-    def factorial(self, n):
+    @staticmethod
+    def factorial(n):
         if n == 0:
             return 1
-        return n * self.factorial(n - 1)
+        return n * Calculator.factorial(n - 1)
 
-
-    def fibonacci(self, n):
+    @staticmethod
+    def fibonacci(n):
         if n <= 1:
             return n
-        return self.fibonacci(n - 1) + self.fibonacci(n - 2)
+        return Calculator.fibonacci(n - 1) + Calculator.fibonacci(n - 2)
 
 
 def main():
